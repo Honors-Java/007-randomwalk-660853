@@ -7,32 +7,49 @@ int steps = 0;
 int x = 200;
 int y = 200;
 
-
+int r = (int)(Math.random()*4);
 void setup() {
 	size(500, 500);
   frameRate(10);
 }
 
 void draw() {
+  if (steps<n){
+    //generate random numbers
+    int r = (int)(Math.random()*4);
+    
+  }
 	stroke(1);
-  //starts random walking from 200,200
+  //first rectangle
+  fill(255);
   rect(x, y, 10, 10);
-
-  Math.random(1,4);
-  if x=1{
+  
+  //send rectangle in certain directions based off numbers
+  if (r==0){
+    fill(0,0,255);
     y=y-10;
+    rect(x,y,10,10);
     steps=steps+1;
-  }else if x=2{
+  }else if (r==1){
+    fill(0,0,255);
     y=y+10;
+    rect(x,y,10,10);
     steps=steps+1;
-  }else if x=3{
+  }else if (r==2){
+    fill(0,0,255);
     x=x-10;
+    rect(x,y,10,10);
     steps=steps+1;
-  }else if x=4{
+  }else if (r==3){
+    fill(0,0,255);
     x=x+10;
+    rect(x,y,10,10);
     steps=steps+1;
   }
   
+  
+  
+
   //Here is where you should create the new rectangles to create the illusion of 'random walking'
   // You will need to make sure you dont draw more rectangles than the limit of steps
   //You'll need to use the Math.random() to decide how to create randomness in your drawing of rectangles.
