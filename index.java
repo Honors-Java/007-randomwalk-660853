@@ -17,6 +17,21 @@ void draw() {
 	stroke(1);
   //starts random walking from 200,200
   rect(x, y, 10, 10);
+
+  Math.random(1,4);
+  if x=1{
+    y=y-10;
+    steps=steps+1;
+  }else if x=2{
+    y=y+10;
+    steps=steps+1;
+  }else if x=3{
+    x=x-10;
+    steps=steps+1;
+  }else if x=4{
+    x=x+10;
+    steps=steps+1;
+  }
   
   //Here is where you should create the new rectangles to create the illusion of 'random walking'
   // You will need to make sure you dont draw more rectangles than the limit of steps
